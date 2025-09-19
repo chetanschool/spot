@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment --> chetan
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment --> chetan dahal
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment --> dahal.64
+- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment --> 9/19 1:50PM
 
 ## Assignment Overview
 
@@ -200,68 +200,86 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: <!-- TODO: give component a name then delete this comment --> Spotify playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - <!-- TODO: describe your component then delete this comment --> The purpose of this componenet would be to do stuff a spotify playlist can do. It would have a ordered collection of songs and be changed by adding removing and changing song orders. The kernel methods would provide the smallest changes to change tracks while secondary methods could give more in depth changes to tracks.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - <!-- TODO: list kernel methods then delete this comment --> addsong(song s) ; add a song to playlist
+    removesong(int a) ; removes song from playlist index a
+    int getsize() ; returns size of playlist
   - **Secondary Methods**:
     - <!-- TODO: list secondary methods then delete this comment -->
+    void shuffle() ; shuffles the playlist
+    void clear() ; removes all songs in playlist
+    boolean contains(song s) ; checks if song s is in playlist
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment --> yes because users can add and remove songs and change their order
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment --> i don't know
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment -->i don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment -->yeah i can implement shuffle using add and remove. clear with just remove and contains im not sure yet
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: <!-- TODO: give component a name then delete this comment --> shopping cart
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - <!-- TODO: describe your component then delete this comment --> it'll become an online shopping cart so you can add and remove items.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - <!-- TODO: list kernel methods then delete this comment --> void additem(item i) ; adds item to cart
+    item removeitem(int a) ; removes item at index a
+    int getsize() ; returns total number of items in cart
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
     - <!-- TODO: list secondary methods then delete this comment -->
+    void clear() ; removes all items in cart
+    boolean contains(item i) ; checks if item i is in cart
+    double getPrice(item i) ; gets the price of item i
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment --> yes because items have to be removed and added
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment --> im not sure
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment --> yeah i would probably add a max size to cart
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <!-- TODO: provide an argument then delete this comment --> im not sure
+
+- Component Design #3: <!-- TODO: give component a name then delete this comment -->todo list
+  - **Description**:
+    - <!-- TODO: describe your component then delete this comment --> this can model tasks that someone has to do like add taks remove taks check if tasks are done etc.
+  - **Kernel Methods**:
+    - <!-- TODO: list kernel methods then delete this comment -->
+    void addtask(task t) ; adds a task
+    task removetask(int i) ; removes a task at index i
+    int getsize() ; gets total number of tasks
+
+  - **Secondary Methods**:
+    - <!-- TODO: list secondary methods then delete this comment -->
+    void clear() ; removes all tasks
+    void priortize(int i, int p) ; moves a task infront of queue if its more important
+    void sort() ; sorts the task by priority
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - <!-- TODO: provide an argument then delete this comment --> yesbecause each task would have to be added and removed
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - <!-- TODO: provide an argument then delete this comment --> im not sure
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - <!-- TODO: provide an argument then delete this comment --> im not sure
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - <!-- TODO: provide an argument then delete this comment --> im not sure
 
 ## Post-Assignment
 
