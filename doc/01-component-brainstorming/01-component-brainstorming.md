@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment --> chetan dahal
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment --> Chetan Dahal
 - **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment --> dahal.64
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment --> 9/19 1:50PM
+- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment --> 10/8 11:59
 
 ## Assignment Overview
 
@@ -112,9 +112,10 @@ the magnifying glass icon in the upper-right corner or pressing CTRL+K and
 then V. This kind of button combination is called a chord, for whatever
 reason -->
 
+I'm interested in learning more about how software actually works and improve my coding skills altogether. My gain goal at OSU is to do a good job so I can get a good career in the future. Another goal would just to keep on growing and understanding because the world of tech is changing year after year or even months after months so you can never be stagnant. I like playing games some times and I do trade a little bit now and then. My overall goal would be to get a software job at a big bank or just any financial instuition because I like the markets as a whole.
+
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +123,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +132,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,86 +199,80 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment --> Spotify playlist
+- Component Design #1: Spotify playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment --> The purpose of this componenet would be to do stuff a spotify playlist can do. It would have a ordered collection of songs and be changed by adding removing and changing song orders. The kernel methods would provide the smallest changes to change tracks while secondary methods could give more in depth changes to tracks.
+    - The porpose of this componenet would be to do stuff a spotify playlist can do. It would have a ordered collection of songs and be changed by adding removing and changing song orders. The kernel methods would provide the smallest chang es to change tracks while secondary methods could give more in depth changes to tracks.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment --> addsong(song s) ; add a song to playlist
-    removesong(int a) ; removes song from playlist index a
-    int getsize() ; returns size of playlist
+    - addSong(Song s): adds a song to the playlist
+    - removeSong(int a) - removes song from playlist
+    - getSize() - returns the size of playlist
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-    void shuffle() ; shuffles the playlist
-    void clear() ; removes all songs in playlist
-    boolean contains(song s) ; checks if song s is in playlist
+    - void shuffle() - shuffles the playlist
+    - void clear() - removes all songs in the playlist
+    - boolean contains(Song s) - checks if song s is in the playlist
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> yes because users can add and remove songs and change their order
+      - yes because users can add and remove songs and change their order
+
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> i don't know
+      - i don't know
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->i don't know
+      - i don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->yeah i can implement shuffle using add and remove. clear with just remove and contains im not sure yet
+      - yes, i can implement shuffle using add and remove, clear with just remove and contains im not sure yet
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment --> shopping cart
+- Component Design #2: shopping cart
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment --> it'll become an online shopping cart so you can add and remove items.
+    - it will become an online shopping cart so you can add and remove items from the cart.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment --> void additem(item i) ; adds item to cart
-    item removeitem(int a) ; removes item at index a
-    int getsize() ; returns total number of items in cart
-
+    - void addItem(item i) - adds items
+    - item removeItem(int a) - removes item at index a
+    - int getSize() - returns size of the cart
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-    void clear() ; removes all items in cart
-    boolean contains(item i) ; checks if item i is in cart
-    double getPrice(item i) ; gets the price of item i
+    - boolean contains(item i) - T/F if item is in the cart
+    - double getPrice(item i) - returns the price of the item i
+
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> yes because items have to be removed and added
+      - yes because items would have to be removed and added
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> im not sure
+      - im not sure
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> yeah i would probably add a max size to cart
+      - yes i would probably add a max size to the shopping cart
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment --> im not sure
+      - im not sure yet
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->todo list
+- Component Design #3: todo list
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment --> this can model tasks that someone has to do like add taks remove taks check if tasks are done etc.
+    - this can model taks that someone has to do and add them to a list.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-    void addtask(task t) ; adds a task
-    task removetask(int i) ; removes a task at index i
-    int getsize() ; gets total number of tasks
-
+    - void addTask(task t) - adds a task
+    - Task removeTask(int i) - removes task at index i
+    - int getSize() - returns size of todo list
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-    void clear() ; removes all tasks
-    void priortize(int i, int p) ; moves a task infront of queue if its more important
-    void sort() ; sorts the task by priority
+    - priortize(int i , int p) - removes a task infront of a queue if its more important and p is the priority
+    - void sort() - sorts the task by priority
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> yesbecause each task would have to be added and removed
+      - yes because each task would have to be added and removed
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> im not sure
+      - im not sure
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment --> im not sure
+      - <im not sure
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment --> im not sure
+      - im not sure
 
 ## Post-Assignment
 
