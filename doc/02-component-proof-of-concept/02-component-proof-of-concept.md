@@ -117,6 +117,8 @@ Below is further rationale/explanation for the rubric items above:
 <!-- TODO: briefly argue your choice of design or design something
 new; then delete this comment -->
 
+The choice of design that I will be doing is making the playlist because it's the simplest one to do in my opinion although the other choices are very similar. It also has it's benefits because a lot of people have done the playlist so if I ever need help, I could always just ask one of my classmates. Also, the playlist I feel like would give me enough knowledge to really understand abstract classes.
+
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
 > preference is to use GitHub Desktop. From there, you can click the `Branch`
@@ -126,7 +128,6 @@ new; then delete this comment -->
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
