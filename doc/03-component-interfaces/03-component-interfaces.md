@@ -196,7 +196,7 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Created PlaylistKernel
+- Created PlaylistKernel.java
    -added addSong(T s) - enqueues song to playlist
    -added removeSong(int idx) - removes and returns song at given index
    -added getSize() - returns num of songs in playlist
