@@ -1,3 +1,4 @@
+import components.simplewriter.SimpleWriter;
 import components.standard.Standard;
 
 /**
@@ -28,7 +29,7 @@ public interface PlaylistSecondary<T> extends Standard {
      * Checks if given song is in playlist
      *
      * @param s
-     *          song to check for
+     *            song to check for
      * @return true if s is in playlist, or false if it's not
      *
      */
@@ -38,17 +39,12 @@ public interface PlaylistSecondary<T> extends Standard {
      * Prints out all songs in playlist
      *
      * @param out
-     *      SimpleWriter to output
-     * @requires
-     *      out is open
-     * @ensures
-     * Playlist is printed in order
+     *            SimpleWriter to output
+     * @requires out is open
+     * @ensures Playlist is printed in order
      */
     void printPlaylist(SimpleWriter out);
 
-
     //it's not letting me import simpleWriter and keeps removing this so i'm just not going to import it for now
 
-
 }
-
