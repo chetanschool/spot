@@ -196,11 +196,21 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed kernel and secondary interfaces for Playlist
+- Created PlaylistKernel
+   -added addSong(T s) - enqueues song to playlist
+   -added removeSong(int idx) - removes and returns song at given index
+   -added getSize() - returns num of songs in playlist
+
+-Created PlaylistSecondary.java
+   -added shuffle() - randomly reorders songs
+   -added clear() - removes all songs in playlist
+   -added contains(T s) - checks to see if a given song is in the playlist
+   -added printPlaylist(SimpleWriter out) - prints the entire playlist in order
 
 ### Updated
 
 - Changed design to include Kernel interface for Playlist and secondary interface for playlist
+-Updated changelog to show full changes
 
 ```
 
