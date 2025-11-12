@@ -1,8 +1,8 @@
 # Portfolio Part 3: Component Interfaces
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment --> Chetan Dahal
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment --> dahal.64
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment --> 10/25 11:59
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
+- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
 
 ## Assignment Overview
 
@@ -134,7 +134,6 @@ of it in this folder. You may also embed it just below using markdown syntax
 
 <!-- TODO: make a diagram of your component hierarchy then delete this comment -->
 
-
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
 preference is to use GitHub Desktop. From there, you can click the `Branch`
@@ -155,6 +154,7 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
+<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -192,25 +192,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## 2025.11.11
+## YYYY.MM.DD
 
 ### Added
 
-- Created PlaylistKernel
-   -added addSong(T s) - enqueues song to playlist
-   -added removeSong(int idx) - removes and returns song at given index
-   -added getSize() - returns num of songs in playlist
-
--Created PlaylistSecondary.java
-   -added shuffle() - randomly reorders songs
-   -added clear() - removes all songs in playlist
-   -added contains(T s) - checks to see if a given song is in the playlist
-   -added printPlaylist(SimpleWriter out) - prints the entire playlist in order
+- Designed kernel and enhanced interfaces for <!-- insert name of component here --> component
 
 ### Updated
 
-- Changed design to include Kernel interface for Playlist and secondary interface for playlist
--Updated changelog to show full changes
+- Changed design to include ...
 
 ```
 

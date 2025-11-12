@@ -1,8 +1,8 @@
 # Portfolio Part 4: Abstract Class
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment --> Chetan Dahal
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment --> dahal.64
+- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment --> 11/12 11:59
 
 ## Assignment Overview
 
@@ -172,15 +172,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2025.11.11
 
 ### Added
 
-- Designed abstract class for <!-- insert name of component here --> component
+- Designed abstract class for Playlist component
+- Implemented all secondary methods using kernel methods
+   -clear ; contains ; shuffle ; printPlaylist
+- Implemented object methods using kernel methods
 
 ### Updated
 
-- Changed design to include ...
+- Changed design to include an abstract class
 
 ```
 

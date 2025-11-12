@@ -1,50 +1,117 @@
 import components.simplewriter.SimpleWriter;
-import components.standard.Standard;
 
 /**
+ * Abstract class for Playlist thats implements secondary methods using kernel
+ * methods.
+ *
  * @param <T>
- *            Types of songs in playlist
+ *            type of song objects in playlist
  */
+public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
+    ---------------------------------------------------------
 
-public interface PlaylistSecondary<T> extends Standard {
-
-    /**
-     * Randomly shuffles the playlist
-     *
-     * @updates this
-     *
-     */
-    void shuffle();
-
-    /**
-     * Removes all songs from playlist
-     *
-     * @updates this
-     * @ensures this = <>
-     */
     @Override
-    void clear();
+    public final void clear() {
+        while (this.getSize() > 0) {
+            this.removeSong(0);
+        }
+    }
 
-    /**
-     * Checks if given song is in playlist
-     *
-     * @param s
-     *            song to check for
-     * @return true if s is in playlist, or false if it's not
-     *
-     */
-    boolean contains(T s);
+    @Override
+    public final boolean contains(T s) {
+        assert s != null : "Violation of: s is not null";
 
-    /**
-     * Prints out all songs in playlist
-     *
-     * @param out
-     *            SimpleWriter to output
-     * @requires out is open
-     * @ensures Playlist is printed in order
-     */
-    void printPlaylist(SimpleWriter out);
+        boolean found = false;
+        int size = this.getSize();
 
-    //it's not letting me import simpleWriter and keeps removing this so i'm just not going to import it for now
+        for (int i = 0; i < size; i++) {
+            T song = this.removeSong(0);
+            if (song.equals(s))
+                found = true;
+            this.addSong(song);
+        }
 
+        return found;
+    }
+
+    @Override
+    public final void shuffle() {
+        int size = this.getSize();
+        for (int i = 0; i < size; i++) {
+            T song = this.removeSong(0);
+            this.addSong(song);
+        }
+    }
+
+    @Override
+    public final void printPlaylist(SimpleWriter out) {
+        assert out.isOpen() : "Violation of: out is open";
+
+        out.println("Current Playlist:");
+        int size = this.getSize();
+
+        for (int i = 0; i < size; i++) {
+            T song = this.removeSong(0);
+            out.println((i + 1) + ". " + song);
+            this.addSong(song);
+        }
+    }
+
+    @Override
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("[");
+        int size = this.getSize();
+
+        for (int i = 0; i < size; i++) {
+            T song = this.removeSong(0);
+            sb.append(song);
+            if (i < size - 1)
+                sb.append(", ");
+            this.addSong(song);
+        }
+
+        sb.append("]");
+        return sb.toString();
+    }
+
+    @Override
+    public final boolean equals(Object obj) {
+        if (obj == this)
+            return true;
+        if (!(obj instanceof PlaylistSecondary))
+            return false;
+
+        PlaylistSecondary<T> other = (PlaylistSecondary<T>) obj;
+        int size = this.getSize();
+        if (size != other.getSize())
+            return false;
+
+        boolean equal = true;
+        for (int i = 0; i < size; i++) {
+            T song1 = this.removeSong(0);
+            T song2 = other.removeSong(0);
+
+            if (!song1.equals(song2))
+                equal = false;
+
+            this.addSong(song1);
+            other.addSong(song2);
+        }
+
+        return equal;
+    }
+
+    @Override
+    public final int hashCode() {
+        int hash = 1;
+        int size = this.getSize();
+
+        for (int i = 0; i < size; i++) {
+            T song = this.removeSong(0);
+            hash = 31 * hash + (song == null ? 0 : song.hashCode());
+            this.addSong(song);
+        }
+
+        return hash;
+    }
 }
