@@ -1,13 +1,14 @@
 import components.simplewriter.SimpleWriter;
 
 /**
- * abstract class for Playlist that implements secondary methods using kernel
+ * Abstract class for Playlist thats implements secondary methods using kernel
  * methods.
  *
  * @param <T>
  *            type of song objects in playlist
  */
 public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
+    ---------------------------------------------------------
 
     @Override
     public final void clear() {
@@ -25,9 +26,8 @@ public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
 
         for (int i = 0; i < size; i++) {
             T song = this.removeSong(0);
-            if (song.equals(s)) {
+            if (song.equals(s))
                 found = true;
-            }
             this.addSong(song);
         }
 
@@ -99,5 +99,19 @@ public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
         }
 
         return equal;
+    }
+
+    @Override
+    public final int hashCode() {
+        int hash = 1;
+        int size = this.getSize();
+
+        for (int i = 0; i < size; i++) {
+            T song = this.removeSong(0);
+            hash = 31 * hash + (song == null ? 0 : song.hashCode());
+            this.addSong(song);
+        }
+
+        return hash;
     }
 }
