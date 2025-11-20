@@ -196,12 +196,12 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Created PlaylistKernel
+- Created PlaylistKernel.java
    -added addSong(T s) - enqueues song to playlist
    -added removeSong(int idx) - removes and returns song at given index
    -added getSize() - returns num of songs in playlist
 
--Created PlaylistSecondary.java
+-Created Playlist.java
    -added shuffle() - randomly reorders songs
    -added clear() - removes all songs in playlist
    -added contains(T s) - checks to see if a given song is in the playlist
