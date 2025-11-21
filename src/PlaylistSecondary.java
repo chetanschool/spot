@@ -1,14 +1,13 @@
 import components.simplewriter.SimpleWriter;
 
 /**
- * Abstract class for Playlist thats implements secondary methods using kernel
- * methods.
+ * Abstract class for Playlist that implements secondary methods using just the
+ * kernel methods.
  *
  * @param <T>
- *            type of song objects in playlist
+ *            type of songs in the playlist type T
  */
 public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
-    ---------------------------------------------------------
 
     @Override
     public final void clear() {
@@ -25,10 +24,11 @@ public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
         int size = this.getSize();
 
         for (int i = 0; i < size; i++) {
-            T song = this.removeSong(0);
-            if (song.equals(s))
+            T x = this.removeSong(0);
+            if (x.equals(s)) {
                 found = true;
-            this.addSong(song);
+            }
+            this.addSong(x);
         }
 
         return found;
@@ -36,69 +36,75 @@ public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
 
     @Override
     public final void shuffle() {
-        int size = this.getSize();
-        for (int i = 0; i < size; i++) {
-            T song = this.removeSong(0);
-            this.addSong(song);
+        // Simple rotate shuffle
+        if (this.getSize() > 0) {
+            T first = this.removeSong(0);
+            this.addSong(first);
         }
     }
 
     @Override
     public final void printPlaylist(SimpleWriter out) {
-        assert out.isOpen() : "Violation of: out is open";
+        assert out != null && out.isOpen() : "Violation of: out is open";
 
         out.println("Current Playlist:");
         int size = this.getSize();
 
         for (int i = 0; i < size; i++) {
-            T song = this.removeSong(0);
-            out.println((i + 1) + ". " + song);
-            this.addSong(song);
+            T x = this.removeSong(0);
+            out.println((i + 1) + ". " + x);
+            this.addSong(x);
         }
     }
 
     @Override
     public final String toString() {
-        StringBuilder sb = new StringBuilder("[");
+        String result = "[";
         int size = this.getSize();
 
         for (int i = 0; i < size; i++) {
-            T song = this.removeSong(0);
-            sb.append(song);
-            if (i < size - 1)
-                sb.append(", ");
-            this.addSong(song);
+            T x = this.removeSong(0);
+            result += x;
+            if (i < size - 1) {
+                result += ", ";
+            }
+            this.addSong(x);
         }
 
-        sb.append("]");
-        return sb.toString();
+        result += "]";
+        return result;
     }
 
     @Override
     public final boolean equals(Object obj) {
-        if (obj == this)
+        if (obj == this) {
             return true;
-        if (!(obj instanceof PlaylistSecondary))
+        }
+        if (!(obj instanceof PlaylistKernel<?>)) {
             return false;
-
-        PlaylistSecondary<T> other = (PlaylistSecondary<T>) obj;
-        int size = this.getSize();
-        if (size != other.getSize())
-            return false;
-
-        boolean equal = true;
-        for (int i = 0; i < size; i++) {
-            T song1 = this.removeSong(0);
-            T song2 = other.removeSong(0);
-
-            if (!song1.equals(song2))
-                equal = false;
-
-            this.addSong(song1);
-            other.addSong(song2);
         }
 
-        return equal;
+        PlaylistKernel<T> other = (PlaylistKernel<T>) obj;
+
+        int size = this.getSize();
+        if (size != other.getSize()) {
+            return false;
+        }
+
+        boolean same = true;
+        for (int i = 0; i < size; i++) {
+            T a = this.removeSong(0);
+            T b = other.removeSong(0);
+
+            if (!a.equals(b)) {
+                same = false;
+            }
+
+            this.addSong(a);
+            other.addSong(b);
+        }
+
+        return same;
     }
 
     @Override
@@ -107,9 +113,9 @@ public abstract class PlaylistSecondary<T> implements PlaylistKernel<T> {
         int size = this.getSize();
 
         for (int i = 0; i < size; i++) {
-            T song = this.removeSong(0);
-            hash = 31 * hash + (song == null ? 0 : song.hashCode());
-            this.addSong(song);
+            T x = this.removeSong(0);
+            hash = 31 * hash + x.hashCode();
+            this.addSong(x);
         }
 
         return hash;
