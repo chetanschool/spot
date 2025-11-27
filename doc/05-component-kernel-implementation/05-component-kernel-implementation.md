@@ -120,7 +120,9 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+The representation I will use for my Playlist is a queue because a normal playlist acts like a queue itself and seems the most logical to me. I can make addSong enqueue ; removeSong dequeue ; and getSize as the queue length. The convention of the queue would make sure that it can't contain null and the order of the queue is dependent on how the user orginally added the songs. The correspondence or how its interpreted would be that each song would map into the playlist so no matter what position the playlist is in, it would always have a song there.
+
+
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -182,11 +184,11 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed kernel implementation for <!-- insert name of component here --> component
+- Designed kernel implementation for Playlist component
 
 ### Updated
 
-- Changed design to include ...
+- Changed design to include kernel implementation
 
 ```
 
