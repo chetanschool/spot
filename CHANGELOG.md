@@ -8,6 +8,18 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+
+## [2025.11.26]
+### Added
+
+- Designed kernel implementation for Playlist component
+
+### Updated
+
+- Changed design to include kernel implementation
+
+
+
 ## [2024.12.30]
 
 - Added table-based rubrics to all 6 parts of the project
