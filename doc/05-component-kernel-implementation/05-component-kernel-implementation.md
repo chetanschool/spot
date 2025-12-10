@@ -1,8 +1,8 @@
 # Portfolio Part 5: Kernel Implementation
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment --> Chetan Dahal
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment --> dahal.64
+- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment --> 11/26 11:59PM
 
 ## Assignment Overview
 
@@ -120,7 +120,9 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+The representation I will use for my Playlist is a queue because a normal playlist acts like a queue itself and seems the most logical to me. I can make addSong enqueue ; removeSong dequeue ; and getSize as the queue length. The convention of the queue would make sure that it can't contain null and the order of the queue is dependent on how the user orginally added the songs. The correspondence or how its interpreted would be that each song would map into the playlist so no matter what position the playlist is in, it would always have a song there.
+
+
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -182,11 +184,11 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed kernel implementation for <!-- insert name of component here --> component
+- Designed kernel implementation for Playlist component
 
 ### Updated
 
-- Changed design to include ...
+- Changed design to include kernel implementation
 
 ```
 
