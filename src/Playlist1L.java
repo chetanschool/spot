@@ -7,10 +7,26 @@ import components.standard.Standard;
  *
  * @param <T>
  *            type of songs in the playlist
+ *
+ *
+ *            Convention : The playlist is represented as a queue and it has no
+ *            null values and the order of the songs in the queue is in the
+ *            order in which the way the user adds it originally.
+ *
+ *            Correspondence : Every element in the queue directly corresponds
+ *            to a song in the playlist and the front of the queue represents
+ *            the first song in the playlist, and second represents the second,
+ *            and so on.. They all have a position in the queue to show the next
+ *            order.
+ *
  */
+
 public final class Playlist1L<T> extends PlaylistSecondary<T>
         implements Standard {
 
+    /**
+     * The queue that stores the playlists in order.
+     */
     private Queue<T> rep;
 
     public Playlist1L() {
